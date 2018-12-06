@@ -31,7 +31,7 @@ def media_download(mylikes, dirname):
             print('[' + str(i+1) + ':' + str(len(mylikes['liked_posts'])) + ']')
 
 def main():
-    info = client.info()
+    info = client.info(pytumblr.TumblrRestClient)
     dirname = info['user']['name']
     blogurl = info['user']['blogs'][0]['url']
     likescount = info['user']['likes']
